@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Fikri Game Store</string>
+
+    <string-array name="data_name">
+        <item>Ahmad Dahlan</item>
+        <item>Ahmad Yani</item>
+    </string-array>
+    <integer-array name="data_photo">
+        <item>@drawable/thumbnail</item>
+        <item>@drawable/thumbnail2</item>
+    </integer-array>
 </resources>
