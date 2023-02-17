@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Fikri Game Store"
+rootProject.name = "Tugas3-BootcampIdn"
 include ':app'
