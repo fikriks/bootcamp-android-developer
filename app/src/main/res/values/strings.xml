@@ -1,12 +1,21 @@
 <resources>
-    <string name="app_name">Fikri Game Store</string>
-
-    <string-array name="data_name">
-        <item>Ahmad Dahlan</item>
-        <item>Ahmad Yani</item>
-    </string-array>
-    <integer-array name="data_photo">
-        <item>@drawable/thumbnail</item>
-        <item>@drawable/thumbnail2</item>
-    </integer-array>
+    <string name="app_name">Meal App</string>
+    <string name="image_meal">Image Meal</string>
+    <string name="meal_name">Meal Name</string>
+    <string name="example_area">England</string>
+    <string name="example_tags">Vegan</string>
+    <string name="meal_store">Meal Store</string>
+    <string name="best_meal_title">Best Meal in 2023</string>
+    <string name="failed_to_fetch_data">Failed to fetch data.</string>
+    <string name="warning">warning</string>
+    <string name="meal_detail_image">Meal Detail Image</string>
+    <string name="example_category">Seafood</string>
+    <string name="about_meal">How To Make:</string>
+    <string name="lorem_ipsum">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="add_to_favorite">Add To Favorite</string>
+    <string name="favorites_empty">Empty Favorites Meal</string>
+    <string name="favorite">Favorite</string>
+    <string name="remove_from_favorite">Remove from favorite</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="app_subtitle">Easy To Make Great Food From Recipe In Your Hand</string>
 </resources>

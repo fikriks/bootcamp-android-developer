@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.example.fikrikhairulshaleh_mealdb.model.MealsItem" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/latest_meal_item_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:elevation="10dp"
+        android:orientation="horizontal"
+        card_view:cardCornerRadius="14dp"
+        card_view:cardElevation="10dp"
+        card_view:cardMaxElevation="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/item_img"
+                loadImageFromUrl="@{data.strMealThumb}"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/image_meal"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_placeholder" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/item_img">
+
+                <TextView
+                    android:id="@+id/item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="4dp"
+                    android:maxLines="2"
+                    android:text="@{data.strMeal}"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    tools:text="@string/meal_name" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

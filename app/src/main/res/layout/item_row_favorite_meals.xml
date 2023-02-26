@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="mealDetail"
+            type="com.example.fikrikhairulshaleh_mealdb.model.MealItemDetail" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/latest_meal_item_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:elevation="10dp"
+        android:orientation="horizontal"
+        card_view:cardCornerRadius="14dp"
+        card_view:cardElevation="10dp"
+        card_view:cardMaxElevation="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/item_img"
+                loadImageFromUrl="@{mealDetail.strMealThumb}"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/image_meal"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_placeholder" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/item_img">
+
+                <TextView
+                    android:id="@+id/item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:maxLines="2"
+                    android:text="@{mealDetail.strMeal}"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    tools:text="@string/meal_name" />
+
+                <TextView
+                    android:id="@+id/item_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/item_name"
+                    android:layout_marginStart="16dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:justificationMode="inter_word"
+                    android:maxLines="1"
+                    android:text="@{mealDetail.strCategory}"
+                    android:textColor="@color/light_gray"
+                    android:textSize="12sp"
+                    tools:text="@string/example_category" />
+
+                <TextView
+                    android:id="@+id/parent_platform"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/item_category"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:ellipsize="end"
+                    android:textStyle="italic"
+                    android:fontFamily="@font/quicksand"
+                    android:justificationMode="inter_word"
+                    android:maxLines="1"
+                    android:text="@{mealDetail.strTags}"
+                    android:textColor="@color/light_gray"
+                    android:textSize="12sp"
+                    tools:text="@string/example_tags" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
